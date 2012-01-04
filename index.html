@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <title>cards</title>
+    <script src="cards.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var d = new Deck(true, true);
+      d.shuffle();
+      //d.dump();
+      for(var j = 0; j < 4; j++) {
+        for(var i = 0; i < 13; i++) {
+          div = d.cards[j*13+i].draw(i*80+2, j*124+2);
+          //div.innerText = "\n\n" + Card.ranks[d.cards[j*13+i].rank] + Card.suits[d.cards[j*13+i].suit];
+      }
+      div = d.cards[52].draw(2, 4*124+2);
+      //div.innerText = "\n\n" + Card.ranks[d.cards[52].rank] + Card.suits[d.cards[52].suit];
+      div = d.cards[53].draw(82, 4*124+2);
+      //div.innerText = "\n\n" + Card.ranks[d.cards[53].rank] + Card.suits[d.cards[53].suit];
+      Card.drawBack(162, 4*124+2);
+   }
+    </script>
+  </body>
+</html>
