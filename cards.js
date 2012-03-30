@@ -22,10 +22,10 @@ window.Card = (function() {
 	return "" + Card.ranks[this.rank] + Card.suits[this.suit];
     };
 
-    Card.prototype.draw = function(x, y, div) {
-	if(!div) {
-	    div = document.createElement('div');
-	}
+    Card.prototype.draw = function(x, y, div, parent) {
+	if(!div) div = document.createElement('div');
+	if(!parent) parent = document.body;
+
 	if(div.className.length == 0) div.className = "card";
 	else div.className = div.className + " card";
 
@@ -37,7 +37,7 @@ window.Card = (function() {
 	div.style.position = 'absolute';
 	div.style.left = x + "px";
 	div.style.top = y + "px";
-	document.body.appendChild(div);
+	parent.appendChild(div);
 	this.div = div;
 	return div;
     };
