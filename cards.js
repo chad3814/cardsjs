@@ -1,5 +1,12 @@
-var Card = (function() {
-    Card = function(rank, suit) {
+"use strict";
+
+if(typeof console == "undefined") {
+    console = new Object();
+    console.log = function() {};
+}
+
+window.Card = (function() {
+    var Card = function(rank, suit) {
 	this.rank = rank;
 	this.suit = suit;
 	this.div = null;
@@ -7,15 +14,21 @@ var Card = (function() {
 
     Card.prototype.dump = function() {
 	if(console && console.log) {
-	    console.log(Card.ranks[this.rank] + Card.suits[this.suit]);
+	    console.log(this.toString());
 	}
+    };
+
+    Card.prototype.toString = function() {
+	return "" + Card.ranks[this.rank] + Card.suits[this.suit];
     };
 
     Card.prototype.draw = function(x, y, div) {
 	if(!div) {
 	    div = document.createElement('div');
 	}
-	div.className = 'card';
+	if(div.className.length == 0) div.className = "card";
+	else div.className = div.className + " card";
+
 	if(this.rank == Card.JOKER) {
 	    div.style.backgroundPosition = (this.suit * -79) + "px " + (4 * -123) + "px";
 	} else {
@@ -61,8 +74,8 @@ var Card = (function() {
     return Card;
 })();
 
-var Hand = (function() {
-    Hand = function() {
+window.Hand = (function() {
+    var Hand = function() {
 	this.cards = [];
     };
 
@@ -84,8 +97,8 @@ var Hand = (function() {
     return Hand;
 })();
 
-var Deck = (function() {
-    Deck = function(black_joker, red_joker) {
+window.Deck = (function() {
+    var Deck = function(black_joker, red_joker) {
 	this.cards = [];
 	for(var i = Card.FIRST_SUIT; i <= Card.LAST_SUIT; ++i) {
 	    for(var j = Card.ACE; j <= Card.KING; ++j) {
