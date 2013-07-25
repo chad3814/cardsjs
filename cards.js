@@ -72,10 +72,12 @@ var Card = (function (win) {
     Card.suits = [ 'C', 'D', 'H', 'S' ];
 
     Card.JOKER = 0;
+    Card.FIRST_RANK = 1;
     Card.ACE = 1;
     Card.JACK = 11;
     Card.QUEEN = 12;
     Card.KING = 13;
+    Card.LAST_RANK = 13;
     Card.ranks = [ 'G', 'A', '2', '3', '4', '5', '6', '7',
                     '8', '9', 'T', 'J', 'Q', 'K' ];
 
@@ -109,22 +111,23 @@ var Hand = (function (win) {
 }(this));
 
 var Deck = (function (win) {
-    var Deck = function (black_joker, red_joker) {
+    var Deck = function (CardConstructor, black_joker, red_joker) {
+        CardConstructor = CardConstructor || Card;
         this.cards = [];
         var i;
         var j;
-        for (i = Card.FIRST_SUIT; i <= Card.LAST_SUIT; ++i) {
-            for (j = Card.ACE; j <= Card.KING; ++j) {
-                this.cards.push(new Card(j, i));
+        for (i = CardConstructor.FIRST_SUIT; i <= CardConstructor.LAST_SUIT; ++i) {
+            for (j = CardConstructor.FIRST_RANK; j <= CardConstructor.LAST_RANK; ++j) {
+                this.cards.push(new CardConstructor(j, i));
             }
         }
 
         if (black_joker) {
-            this.cards.push(new Card(Card.JOKER, Card.CLUB));
+            this.cards.push(new CardConstructor(CardConstructor.JOKER, CardConstructor.CLUB));
         }
 
         if (red_joker) {
-            this.cards.push(new Card(Card.JOKER, Card.DIAMOND));
+            this.cards.push(new CardConstructor(CardConstructor.JOKER, CardConstructor.DIAMOND));
         }
     };
 
@@ -176,6 +179,24 @@ var Deck = (function (win) {
         }
 
         return hands;
+    };
+
+    Deck.prototype.drawOne = function () {
+        if (this.cards.length === 0) {
+            return null;
+        }
+        return this.cards.shift();
+    };
+
+    Deck.prototype.draw = function (x, y, div) {
+        div = Card.drawBack(x, y, div);
+        div.innerHTML = '';
+        var count_span = win.document.createElement('span');
+        count_span.innerText = this.cards.length;
+        count_span.style.backgroundColor = 'white';
+        count_span.style.margin = '5px 5px';
+        div.appendChild(count_span);
+        return div;
     };
 
     return Deck;
