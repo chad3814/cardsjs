@@ -26,6 +26,9 @@ var Card = (function (win) {
             div = win.document.createElement('div');
         }
 
+        this.div = div;
+        var img = win.document.createElement('img');
+
         if (!parent) {
             parent = win.document.body;
         }
@@ -37,16 +40,20 @@ var Card = (function (win) {
         }
 
         if (this.rank === Card.JOKER) {
-            div.style.backgroundPosition = (this.suit * -79) + 'px ' + (4 * -123) + 'px';
-        } else {
-            div.style.backgroundPosition = ((this.rank - 1) * -79) + 'px ' + (this.suit * -123) + 'px';
+            // oops no joke svgs
+            return div;
         }
+
+        img.src = 'svg/' + Card.ranks[this.rank] + Card.suits[this.suit] + '.svg';
+
+        div.innerHTML = '';
+        div.innerText = '';
+        div.appendChild(img);
 
         div.style.position = 'absolute';
         div.style.left = x + 'px';
         div.style.top = y + 'px';
         parent.appendChild(div);
-        this.div = div;
         return div;
     };
 
@@ -54,8 +61,12 @@ var Card = (function (win) {
         if (!div) {
             div = win.document.createElement('div');
         }
+        var img = win.document.createElement('img');
         div.className = 'card';
-        div.style.backgroundPosition = (2 * -79) + 'px ' + (4 * -123) + 'px';
+        img.src = 'svg/Blue_Back.svg';
+        div.innerHTML = '';
+        div.innerText = '';
+        div.appendChild(img);
         div.style.position = 'absolute';
         div.style.left = x + 'px';
         div.style.top = y + 'px';
@@ -79,7 +90,7 @@ var Card = (function (win) {
     Card.KING = 13;
     Card.LAST_RANK = 13;
     Card.ranks = [ 'G', 'A', '2', '3', '4', '5', '6', '7',
-                    '8', '9', 'T', 'J', 'Q', 'K' ];
+                    '8', '9', '10', 'J', 'Q', 'K' ];
 
     return Card;
 }(this));

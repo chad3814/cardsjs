@@ -1,5 +1,8 @@
 .card {
-    width: 79px;
-    height: 123px;
-    background: url(cards.png) white;
+    width: 80px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
 }
