@@ -201,11 +201,13 @@ var Deck = (function (win) {
 
     Deck.prototype.draw = function (x, y, div) {
         div = Card.drawBack(x, y, div);
-        div.innerHTML = '';
         var count_span = win.document.createElement('span');
         count_span.innerText = this.cards.length;
         count_span.style.backgroundColor = 'white';
         count_span.style.margin = '5px 5px';
+        count_span.style.position = 'absolute';
+        count_span.style.top = '0';
+        count_span.style.left = '0';
         div.appendChild(count_span);
         return div;
     };
