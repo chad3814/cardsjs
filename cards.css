@@ -6,3 +6,17 @@
     width: 100%;
     height: auto;
 }
+
+.card.flipToEdge {
+    -webkit-transition:all 0.5s ease-in-out;
+    -webkit-perspective: 800px;
+    -webkit-perspective-origin: 50% 100px;
+    -webkit-transform: rotateY(90deg);
+}
+
+.card.flipFromEdge {
+    -webkit-transition:all 0.5s ease-in-out;
+    -webkit-perspective: 800px;
+    -webkit-perspective-origin: 50% 100px;
+    -webkit-transform: rotateY(0deg);
+}

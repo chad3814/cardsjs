@@ -74,6 +74,27 @@ var Card = (function (win) {
         return div;
     };
 
+    var flip = function (div, drawer) {
+        var classes = div.className;
+        div.className = classes + ' flipToEdge';
+        setTimeout(function () {
+            drawer();
+            div.className = classes + ' flipFromEdge';
+            setTimeout(function () {
+                div.className = classes;
+            }, 500);
+        }, 500);
+        return div;
+    };
+
+    Card.prototype.frontToBack = function (div) {
+        return flip(div, Card.drawBack.bind(Card, div.style.left, div.style.top, div));
+    };
+
+    Card.prototype.backToFront = function (div) {
+        return flip(div, this.draw.bind(this, div.style.left, div.style.top, div));
+    };
+
     Card.FIRST_SUIT = 0;
     Card.SPADE = 3;
     Card.HEART = 2;
