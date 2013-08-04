@@ -82,8 +82,8 @@ var Card = (function (win) {
             div.className = classes + ' flipFromEdge';
             setTimeout(function () {
                 div.className = classes;
-            }, 500);
-        }, 500);
+            }, 250);
+        }, 250);
         return div;
     };
 
