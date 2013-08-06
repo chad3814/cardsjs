@@ -92,7 +92,7 @@ var Card = (function (win) {
     };
 
     Card.prototype.backToFront = function (div) {
-        return flip(div, this.draw.bind(this, div.style.left, div.style.top, div));
+        return flip(div, Card.prototype.draw.bind(this, div.style.left, div.style.top, div));
     };
 
     Card.FIRST_SUIT = 0;
