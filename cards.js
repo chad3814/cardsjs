@@ -57,10 +57,15 @@ var Card = (function (win) {
         return div;
     };
 
-    Card.drawBack = function (x, y, div) {
+    Card.drawBack = function (x, y, div, parent) {
         if (!div) {
             div = win.document.createElement('div');
         }
+
+        if (!parent) {
+            parent = win.document.body;
+        }
+
         var img = win.document.createElement('img');
         div.className = 'card';
         img.src = 'svg/Blue_Back.svg';
@@ -70,7 +75,7 @@ var Card = (function (win) {
         div.style.position = 'absolute';
         div.style.left = x + 'px';
         div.style.top = y + 'px';
-        win.document.body.appendChild(div);
+        parent.appendChild(div);
         return div;
     };
 
