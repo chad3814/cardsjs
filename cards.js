@@ -39,11 +39,6 @@ var Card = (function (win) {
             div.className = div.className + ' card';
         }
 
-        if (this.rank === Card.JOKER) {
-            // oops no joke svgs
-            return div;
-        }
-
         img.src = 'svg/' + Card.ranks[this.rank] + Card.suits[this.suit] + '.svg';
 
         div.innerHTML = '';

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="226"
+   height="314"
+   id="svg4423"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="JD.svg">
+  <title
+     id="title3001">Vectorized Playing Cards 1.0
+</title>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="324.35531"
+     inkscape:cy="140.4032"
+     inkscape:document-units="px"
+     inkscape:current-layer="g3829"
+     showgrid="false"
+     inkscape:snap-global="true"
+     inkscape:snap-bbox="true"
+     inkscape:snap-page="true"
+     inkscape:window-width="1440"
+     inkscape:window-height="811"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <defs
+     id="defs4425" />
+  <metadata
+     id="metadata4428">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml
+</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Vectorized Playing Cards 1.0
+</dc:title>
+        <dc:date>4/24/2011
+</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Chris Aguilar
+</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>LGPL 3.0
+</dc:title>
+          </cc:Agent>
+        </dc:rights>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     transform="translate(-259,-369)"
+     inkscape:groupmode="layer"
+     inkscape:label="JD">
+    <g
+       transform="translate(-289.24359,486.83327)"
+       id="g3829"
+       style="display:inline">
+      <g
+         transform="translate(-6377.9376,2318.4423)"
+         style="display:inline"
+         id="g3190">
+        <rect
+           y="-2435"
+           x="6927.6143"
+           height="311.81104"
+           width="223.22835"
+           id="rect6367-1"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.99673343;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+           rx="10.629921"
+           ry="10.629921" />
+      </g>
+      <g
+         style="display:inline"
+         transform="matrix(-0.1546714,0,0,0.1546714,314.10698,-41.178868)"
+         id="g3951">
+        <g
+           id="g3006">
+          <path
+             style="fill:#d40000;fill-opacity:1"
+             d="m -1686.8349,1464.635 0,-22.5 20.25,0 0,-121.375 c 0,0 0.1017,-29.2129 1.4326,-32.888 15.6141,-53.2076 102.0689,-49.5102 106.3756,-2.0468 1.8209,8.0803 1.3168,34.9348 1.3168,34.9348 l -22.875,0 c 0,0 -0.1615,-8.563 -0.4685,-14.888 2.9627,-50.3993 -58.2227,-39.9325 -61.2591,-6.0828 -1.2665,6.0743 -1.3974,20.9708 -1.3974,20.9708 l 0,121.375 23.625,0 0,22.5 z m 67.1959,-241.9707 c -16.5803,-27.1 -36.4197,-54.2 -60.7908,-81.3 22.2468,-25.0151 41.6425,-51.8121 59.0959,-79.823 20.1171,30.8846 40.8621,57.6881 62.1784,80.7776 -22.5356,25.1988 -41.4469,52.8139 -60.4835,80.3454 z M -2925.3116,-103.62855 c 24.155,-23.39306 44.2323,-49.29553 60.5921,-77.48562 18.7637,28.47042 36.4734,57.80312 61.5561,81.10337 -23.1457,24.812288 -30.5662,32.702964 -62.1248,79.00715 -17.8112,-28.85956 -36.3007,-57.31219 -60.0234,-82.6249 z m -5.2446,-142.2091 c -1.6426,-11.65891 -2.0075,-23.15811 0.1121,-34.34674 l 22.8042,0 c 0,0 -0.145,8.40638 0.1733,15.55638 0.013,45.17146 54.0701,39.3585 62.0521,10.9035 2.8197,-10.05203 2.3797,-26.13342 2.3797,-26.13342 l 0.095,-120.18106 -23.1578,0 0,-23.33453 68.5894,0 0,23.33453 -21.3898,0 0,119.8546 c 0,0 -0.1728,0.51847 -0.057,2.59008 0.4048,7.2335 0.6398,24.56984 -3.1957,32.70354 -21.6723,54.00016 -100.9416,41.75314 -108.4057,-0.94688 z"
+             id="path3020"
+             inkscape:connector-curvature="0"
+             sodipodi:nodetypes="ccccccccccccccccccccccccccccccsccccccccscc" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Printing Marks"
+     id="printing-marks">
+    <g
+       id="CropMarks"
+       inkscape:label="CropMarks" />
+  </g>
+</svg>
